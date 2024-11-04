@@ -26,6 +26,23 @@ acronym_pattern = r'^[A-Z]{2,}:\s'
 # Filtern der Titel, die dem Muster entsprechen
 df['Starts_with_acronym'] = df['Title'].str.match(acronym_pattern)
 
+# Zur weiteren Analyse der Daten: Alle gefilterten Titel ausgeben, sortiert nach Jahr
+# filtered_titles = df[df['Starts_with_acronym']].sort_values(by='Year')[['Year', 'Title']]
+# print("Gefilterte Titel (nach Jahr sortiert):")
+# for index, row in filtered_titles.iterrows():
+#     print(f"{row['Year']}: {row['Title']}")
+
+# Noch mehr Analyse der Daten
+# overview = df.groupby('Year').agg(
+#     total_titles=('Title', 'count'),
+#     filtered_titles=('Starts_with_acronym', 'sum')
+# ).reset_index()
+# print("\nÜbersicht:")
+# print("Jahr | Anzahl aller Titel | Anzahl gefilterte Titel")
+# for index, row in overview.iterrows():
+#     print(f"{row['Year']} | {row['total_titles']} | {row['filtered_titles']}")
+
+
 # Berechnen des Anteils der Titel, die mit einem Akronym beginnen, für jedes Jahr
 yearly_data = df.groupby('Year')['Starts_with_acronym'].mean().reset_index()
 
