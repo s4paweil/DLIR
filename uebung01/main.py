@@ -21,7 +21,7 @@ with open(file_path, 'r', encoding='utf-8') as f:
 df = pd.DataFrame(data, columns=['Type', 'Year', 'Title'])
 
 # Definieren des Regex-Musters für Titel, die mit einem Einzelwort-Akronym und Doppelpunkt beginnen
-acronym_pattern = r'^[A-Z]{2,}:\s'
+acronym_pattern = r'^[A-Z][a-zA-Z]*:\s'
 
 # Filtern der Titel, die dem Muster entsprechen
 df['Starts_with_acronym'] = df['Title'].str.match(acronym_pattern)
