@@ -1,0 +1,14 @@
+phd/de/Theobald2007	0
+journals/ir/SchenkelTW05	14
+journals/dud/Theobald07	0
+journals/dbsk/SizovTW01	0
+conf/xml/SchenkelTW03	10
+conf/webdb/TheobaldW00a	80
+conf/webdb/TheobaldW00	0
+conf/sigmod/TheobaldW02	21
+conf/icde/SchenkelTW05	46
+conf/er/PanTS04	5
+conf/edbt/TheobaldW02	105
+conf/edbt/SchenkelTW04	58
+conf/btw/Theobald03	0
+conf/btw/SizovTW01	0
